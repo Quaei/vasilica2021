@@ -83,8 +83,8 @@ io.on('connection', socket => {
             rooms.push({
                 id: roomId,
                 name: roomName,
-                nameMIni: roomNameMini,
-                locked: false,
+                nameMini: roomNameMini,
+                locked: false, // true when game started, not when password locked.
                 ended: false,
                 spectatorsAllowed: true,
                 hasDisconnetedPlayers: false,
@@ -310,6 +310,7 @@ function searchForTheCoin(roomId) {
         
         const winnerIdx = rooms[roomIdx].players.map(e=>e.luckyNumber).indexOf(luckyDraw);
         if (rooms[roomIdx].players[winnerIdx] !== undefined) {
+            rooms[roomIdx].players[winnerIdx].gotTheCoin = true;
             const winner = rooms[roomIdx].players[winnerIdx];
             io.in(roomId).emit('searchAndDisplayWinner', winner);
         }
