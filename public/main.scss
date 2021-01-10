@@ -1,0 +1,363 @@
+$primary: #dceaff; // snowy white
+$blue: #4c86dd;
+$green: #2f9766;
+$red: #b92e2e;
+$piePlate: #0e0f0d;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: none;
+    color: #dceaff;
+}
+
+.snowflakesContainer,
+.rooms,
+.pie,
+.scratch {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+
+    overflow-y: scroll;
+}
+
+div.snowflakesContainer {
+    z-index: 10;
+
+    background: black;
+}
+
+.rooms {
+    z-index: 9;
+    text-align: center;
+
+    .roomsHeading {
+        margin-top: 5px;
+
+        .roomsWelcome {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .circleDesign {
+                width: 20px;
+                height: 20px;   
+            }
+            
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        .roomsLogin {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .roomsLoginMain {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                .roomsLoginMainInput {
+                    margin-right: 5px;
+
+                    p {
+                        text-align: left;
+                        margin-left: 10px;
+                    }
+
+                    input {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .roomsMain {
+        .chooseRoom {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .chooseRoomHeading {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    width: 200px;
+                }
+            }
+
+            .chooseRoomMain {
+                .displayRooms {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    p {
+                        color: $primary;
+                    }
+
+                    .roomDesign {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        width: 120px;
+                        height: 120px;
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
+
+        .hr {
+            height: 1px;
+            background-color: #dceaffee;
+            margin: 20px 0;
+        }
+
+        .becomeLeader {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .becomeLeaderHeading {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    width: 200px;
+                }
+            }
+
+            .becomeLeaderMain {
+                .becomeLeaderForm {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .becomeLeaderInputs {
+
+                        .becomeLeaderName,
+                        .becomeLeaderPassword {
+                            display: flex;
+                            flex-direction: column;
+                            word-break: break-all;
+
+                            p {
+                                text-align: left;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
+                    button#btnBecomeLeader {
+                        margin-top: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pie {
+    z-index: 8;
+    text-align: center;
+
+    .pieContent {
+        .pieHeading {
+            margin-top: 5px;
+
+            .pieStatus {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .pieStatusName {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .circleDesign {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    
+                    p {
+                        font-size: 1.2rem;       
+                    }
+                }
+
+                .pieStatusLeaderOptions {
+                    display: flex;
+                    flex-direction: row;
+
+                    div {
+                        margin-right: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .circleDesign {
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 15px;
+                            margin-top: 20px;
+                            margin-bottom: 10px;
+                        }
+
+                        .activated {
+                            background-color: #08c557;
+                            
+                            &:before {
+                                border-color: #08c557;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pieInfoField {
+
+            }
+        }
+
+        .pieMain {
+            margin-top: 20px;
+
+            .thePie {
+                img#imgPie {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                }
+            }
+
+            .thePlates {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                .plateDesign {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .disconnected {
+                    background-color: #bbb;
+
+                    &:before {
+                        border-color: #bbb;
+                    }
+                }
+
+                .onTurn {
+                    &:before {
+                        border-color: #08c557;
+                    }
+                }
+
+                .fullPlate {
+                    background-color: #da7b00;
+                }
+            }
+        }
+    }
+}
+
+.circleDesign {
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+    // set custom width and height;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    word-break: break-all;
+    margin: 15px;
+    padding: 5px;
+
+    &:before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border: 5px solid #fff;
+        border-radius: 50%;
+    }
+}
+
+.primaryBtn {
+    position: relative;
+
+    background-color: #4c86dd;
+    border: 5px solid white;
+
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+
+    margin: 15px;
+    padding: 5px;
+
+    &:before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border: 5px solid #4479c9;
+        border-radius: 50%;
+    }
+}
+
+.primaryInp {
+    background-color: #439bc4;
+    border: 5px solid #3a86aa;
+
+    border-radius: 15px;
+    padding: 10px 15px;
+
+    &::placeholder {
+        color: #bfd7fa;
+    }
+}
+
+@media (max-width: 700px) {}

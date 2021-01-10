@@ -1,0 +1,467 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+  border: none;
+  color: #dceaff;
+}
+
+.snowflakesContainer,
+.rooms,
+.pie,
+.scratch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+div.snowflakesContainer {
+  z-index: 10;
+  background: black;
+}
+
+.rooms {
+  z-index: 9;
+  text-align: center;
+}
+
+.rooms .roomsHeading {
+  margin-top: 5px;
+}
+
+.rooms .roomsHeading .roomsWelcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rooms .roomsHeading .roomsWelcome .circleDesign {
+  width: 20px;
+  height: 20px;
+}
+
+.rooms .roomsHeading .roomsWelcome p {
+  font-size: 1.2rem;
+}
+
+.rooms .roomsHeading .roomsLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rooms .roomsHeading .roomsLogin .roomsLoginMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rooms .roomsHeading .roomsLogin .roomsLoginMain .roomsLoginMainInput {
+  margin-right: 5px;
+}
+
+.rooms .roomsHeading .roomsLogin .roomsLoginMain .roomsLoginMainInput p {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.rooms .roomsHeading .roomsLogin .roomsLoginMain .roomsLoginMainInput input {
+  font-size: 1.1rem;
+}
+
+.rooms .roomsMain .chooseRoom {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rooms .roomsMain .chooseRoom .chooseRoomHeading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rooms .roomsMain .chooseRoom .chooseRoomHeading p {
+  width: 200px;
+}
+
+.rooms .roomsMain .chooseRoom .chooseRoomMain .displayRooms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rooms .roomsMain .chooseRoom .chooseRoomMain .displayRooms p {
+  color: #dceaff;
+}
+
+.rooms .roomsMain .chooseRoom .chooseRoomMain .displayRooms .roomDesign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 120px;
+  height: 120px;
+  background-color: #4c86dd;
+}
+
+.rooms .roomsMain .hr {
+  height: 1px;
+  background-color: #dceaffee;
+  margin: 20px 0;
+}
+
+.rooms .roomsMain .becomeLeader {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rooms .roomsMain .becomeLeader .becomeLeaderHeading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rooms .roomsMain .becomeLeader .becomeLeaderHeading p {
+  width: 200px;
+}
+
+.rooms .roomsMain .becomeLeader .becomeLeaderMain .becomeLeaderForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rooms .roomsMain .becomeLeader .becomeLeaderMain .becomeLeaderForm .becomeLeaderInputs .becomeLeaderName,
+.rooms .roomsMain .becomeLeader .becomeLeaderMain .becomeLeaderForm .becomeLeaderInputs .becomeLeaderPassword {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  word-break: break-all;
+}
+
+.rooms .roomsMain .becomeLeader .becomeLeaderMain .becomeLeaderForm .becomeLeaderInputs .becomeLeaderName p,
+.rooms .roomsMain .becomeLeader .becomeLeaderMain .becomeLeaderForm .becomeLeaderInputs .becomeLeaderPassword p {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.rooms .roomsMain .becomeLeader .becomeLeaderMain .becomeLeaderForm button#btnBecomeLeader {
+  margin-top: 35px;
+}
+
+.pie {
+  z-index: 8;
+  text-align: center;
+}
+
+.pie .pieContent .pieHeading {
+  margin-top: 5px;
+}
+
+.pie .pieContent .pieHeading .pieStatus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pie .pieContent .pieHeading .pieStatus .pieStatusName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pie .pieContent .pieHeading .pieStatus .pieStatusName .circleDesign {
+  width: 20px;
+  height: 20px;
+}
+
+.pie .pieContent .pieHeading .pieStatus .pieStatusName p {
+  font-size: 1.2rem;
+}
+
+.pie .pieContent .pieHeading .pieStatus .pieStatusLeaderOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pie .pieContent .pieHeading .pieStatus .pieStatusLeaderOptions div {
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pie .pieContent .pieHeading .pieStatus .pieStatusLeaderOptions div .circleDesign {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.pie .pieContent .pieHeading .pieStatus .pieStatusLeaderOptions div .activated {
+  background-color: #08c557;
+}
+
+.pie .pieContent .pieHeading .pieStatus .pieStatusLeaderOptions div .activated:before {
+  border-color: #08c557;
+}
+
+.pie .pieContent .pieMain {
+  margin-top: 20px;
+}
+
+.pie .pieContent .pieMain .thePie img#imgPie {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.pie .pieContent .pieMain .thePlates {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pie .pieContent .pieMain .thePlates p {
+  font-size: 1.2rem;
+}
+
+.pie .pieContent .pieMain .thePlates .plateDesign {
+  width: 50px;
+  height: 50px;
+}
+
+.pie .pieContent .pieMain .thePlates .disconnected {
+  background-color: #bbb;
+}
+
+.pie .pieContent .pieMain .thePlates .disconnected:before {
+  border-color: #bbb;
+}
+
+.pie .pieContent .pieMain .thePlates .onTurn:before {
+  border-color: #08c557;
+}
+
+.pie .pieContent .pieMain .thePlates .fullPlate {
+  background-color: #da7b00;
+}
+
+.circleDesign {
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  word-break: break-all;
+  margin: 15px;
+  padding: 5px;
+}
+
+.circleDesign:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+
+.primaryBtn {
+  position: relative;
+  background-color: #4c86dd;
+  border: 5px solid white;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  margin: 15px;
+  padding: 5px;
+}
+
+.primaryBtn:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 5px solid #4479c9;
+  border-radius: 50%;
+}
+
+.primaryInp {
+  background-color: #439bc4;
+  border: 5px solid #3a86aa;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.primaryInp::-webkit-input-placeholder {
+  color: #bfd7fa;
+}
+
+.primaryInp:-ms-input-placeholder {
+  color: #bfd7fa;
+}
+
+.primaryInp::-ms-input-placeholder {
+  color: #bfd7fa;
+}
+
+.primaryInp::placeholder {
+  color: #bfd7fa;
+}
+/*# sourceMappingURL=main.css.map */
